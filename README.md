@@ -1,5 +1,10 @@
 # 🧩 Sudoku Game (React + Vite)
 
+
+
+🔗 Live Demo: https://sudoku-interactive-game.netlify.app/
+
+
 A clean and interactive **Sudoku web application** built with **React** and **Vite**, featuring real puzzle data fetched from an online API, smart cell highlighting, input validation, and a smooth animated success effect.
 
 This project focuses on **clear logic**, **proper state management**, and **readable component structure**, making it suitable both as a playable game and as a learning / portfolio project.
