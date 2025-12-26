@@ -146,6 +146,87 @@ http://localhost:5173
 
 ---
 
+
+---
+
+## 🎮 How to Play
+
+### Objective
+Fill the entire **9×9 grid** so that:
+
+- Each **row** contains the numbers **1–9 exactly once**
+- Each **column** contains the numbers **1–9 exactly once**
+- Each **3×3 subgrid** contains the numbers **1–9 exactly once**
+
+---
+
+### Game Start
+- When the application loads, a **new Sudoku puzzle is fetched automatically** from an external API.
+- Some cells are **pre-filled** and represent fixed values.
+- Empty cells are **editable** by the player.
+
+Pre-filled cells **cannot be modified**.
+
+---
+
+### Selecting a Cell
+- Click on any editable cell to select it.
+- The game automatically highlights:
+  - the selected **row**
+  - the selected **column**
+  - the corresponding **3×3 subgrid**
+
+This visual feedback helps track valid placements and reduces mistakes.
+
+---
+
+### Entering Numbers
+- Only digits **1–9** are accepted.
+- Each cell allows **exactly one digit**.
+- Invalid input is ignored automatically.
+- Clearing a cell is allowed.
+
+All inputs are implemented as **controlled React inputs**, ensuring consistent state synchronization.
+
+---
+
+### Checking the Solution
+Click **Check** to validate the current board:
+
+- The board is compared **cell-by-cell** against the solution provided by the API.
+- If all values match:
+  - A success message is displayed
+  - A **green animation** fills the board progressively, cell by cell
+- If any value is incorrect:
+  - An error message is shown
+  - The animation is reset
+
+This guarantees strict correctness.
+
+---
+
+### Resetting the Puzzle
+Click **Reset** to:
+
+- Restore the board to the original puzzle state
+- Remove all user-entered values
+- Clear messages, highlights, and animations
+
+The puzzle itself is **not re-fetched**.
+
+---
+
+### Loading a New Puzzle
+Click **New Puzzle** to:
+
+- Fetch a **completely new Sudoku puzzle**
+- Reset all application state
+- Start a fresh game instantly
+
+No page refresh required.
+
+
+
 ## 📌 Possible Improvements
 
 - ❌ Highlight incorrect values
