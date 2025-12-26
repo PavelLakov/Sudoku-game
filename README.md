@@ -147,8 +147,6 @@ http://localhost:5173
 ---
 
 
----
-
 ## 🎮 How to Play
 
 ### Objective
